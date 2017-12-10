@@ -1,0 +1,13 @@
+[System]
+Version=2.1
+SystemType=SingleProcessorSystem
+DAQService=HostService
+Status=Start
+RTP=Master
+
+[Master]
+Type=DS1103
+State=Enabled
+ServiceID=1
+BoardName=unknown
+File=pii_speed.ppc

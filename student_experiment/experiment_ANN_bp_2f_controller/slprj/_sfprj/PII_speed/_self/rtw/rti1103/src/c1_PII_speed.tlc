@@ -1,0 +1,463 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDefines(block,system) void
+   %openfile chartConstBuf
+   %closefile chartConstBuf
+   %return chartConstBuf
+%endfunction %% ChartDefines
+%function ChartFunctions(block,system) void
+   %openfile chartFcnsBuf
+     %createrecord FcnRec {Name "memset"; RetTypeId FcnGetDataTypeIdFromName("void"); NumArgs 3 }
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("void"); IsPtr 1; IsCplx 0; IsConst 0}
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("int32"); IsPtr 0; IsCplx 0; IsConst 0}
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("uint32"); IsPtr 0; IsCplx 0; IsConst 0}
+%assign junkVal = LibGenFcnCall( FcnRec, 0)
+%createrecord FcnRec {Name "memset"; RetTypeId FcnGetDataTypeIdFromName("void"); NumArgs 3 }
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("void"); IsPtr 1; IsCplx 0; IsConst 0}
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("int32"); IsPtr 0; IsCplx 0; IsConst 0}
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("uint32"); IsPtr 0; IsCplx 0; IsConst 0}
+%assign junkVal = LibGenFcnCall( FcnRec, 0)
+%createrecord FcnRec {Name "memset"; RetTypeId FcnGetDataTypeIdFromName("void"); NumArgs 3 }
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("void"); IsPtr 1; IsCplx 0; IsConst 0}
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("int32"); IsPtr 0; IsCplx 0; IsConst 0}
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("uint32"); IsPtr 0; IsCplx 0; IsConst 0}
+%assign junkVal = LibGenFcnCall( FcnRec, 0)
+%createrecord FcnRec {Name "memset"; RetTypeId FcnGetDataTypeIdFromName("void"); NumArgs 3 }
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("void"); IsPtr 1; IsCplx 0; IsConst 0}
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("int32"); IsPtr 0; IsCplx 0; IsConst 0}
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("uint32"); IsPtr 0; IsCplx 0; IsConst 0}
+%assign junkVal = LibGenFcnCall( FcnRec, 0)
+%createrecord FcnRec {Name "memset"; RetTypeId FcnGetDataTypeIdFromName("void"); NumArgs 3 }
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("void"); IsPtr 1; IsCplx 0; IsConst 0}
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("int32"); IsPtr 0; IsCplx 0; IsConst 0}
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("uint32"); IsPtr 0; IsCplx 0; IsConst 0}
+%assign junkVal = LibGenFcnCall( FcnRec, 0)
+%createrecord FcnRec {Name "tanh"; RetTypeId FcnGetDataTypeIdFromName("double"); NumArgs 1 }
+%addtorecord FcnRec ArgList { Expr "0.0"; TypeId FcnGetDataTypeIdFromName("double"); IsPtr 0; IsCplx 0; IsConst 0}
+%assign junkVal = LibGenFcnCall( FcnRec, 0)
+            
+            
+            
+            
+   %closefile chartFcnsBuf
+   %return chartFcnsBuf
+%endfunction %% ChartFunctions
+%function ChartFunctionProtos(block,system) void
+   %openfile prototypesBuf
+   %closefile prototypesBuf
+   %<SLibCacheSystemCodeToFile("sys_sf_chart_fcn_prototype",system,prototypesBuf)>
+%endfunction %% ChartFunctionProtos
+%function ChartSharedFunctions(block,system) void
+   %openfile chartFcnsBuf
+   %closefile chartFcnsBuf
+   %return chartFcnsBuf
+%endfunction %% ChartSharedFunctions
+%function Outputs(block,system) void
+   %openfile codeBuf
+    
+{
+int32_T eml_j;
+static real_T eml_dv0[30] = { 0.0312, 0.3886, -0.2363, -0.2652, 0.3397, -0.0045, -0.3476, -0.2692, 0.158, 0.0629, -0.2082, 0.1223, 0.2159, -0.2193, -0.0877, -0.1378, 0.2814, -0.3645, 0.4021, -0.2104, -0.0004, 0.2836, 0.1771, -0.3502, 0.1966, -0.371, 0.4459, 0.3864, 0.015, 0.1794 };
+int32_T eml_nv;
+real_T eml_loop_ub;
+real_T eml_j_0;
+int32_T eml_j_1;
+real_T eml_a[3];
+real_T eml_b[3];
+int32_T eml_k;
+int8_T eml_tmp_data[8];
+real_T eml_a_data[8];
+real_T eml_b_data[8];
+/* %<SLibStateflowComment(block,"Embedded MATLAB Function","Subsystem/Embedded MATLAB Function1","1")> */
+/* %<SLibStateflowComment(block,"","","1:5")> */
+%<LibSFAssignDWork(block, 0, "", "7.0")>
+/* liczba neuronow warstwy ukrytej */
+/* %<SLibStateflowComment(block,"","","1:6")> */
+%<LibSFAssignDWork(block, 1, "", "0.0")>
+/* wartosc poczatkowa sieci neuronowej */
+/* %<SLibStateflowComment(block,"","","1:7")> */
+%<LibSFAssignDWork(block, 2, "", "29.0")>
+/*  init_state=rand(number_of_weights+1,1)-0.5; */
+/* %<SLibStateflowComment(block,"","","1:11")> */
+for(eml_j = 0; eml_j < 30; eml_j++) {
+%<LibSFAssignDWork(block, 3, "eml_j", "eml_dv0[eml_j]")>
+}
+/* %<SLibStateflowComment(block,"","","1:43")> */
+%<LibSFAssignDWork(block, 3, "29", "0.0")>
+if(!%<LibSFDWork(block, 4, "")>) {
+/* %<SLibStateflowComment(block,"","","1:46")> */
+/*  if (u(10)==0) */
+/* %<SLibStateflowComment(block,"","","1:48")> */
+%<LibSFAssignDWork(block, 10, "0", "7")>
+%<LibSFAssignDWork(block, 10, "1", "3")>
+memset((void *)%<LibSFDWorkAddr(block, 9, "0")>, 0, 21U * sizeof(real_T));
+%<LibSFAssignDWork(block, 4, "", "TRUE")>
+/* %<SLibStateflowComment(block,"","","1:49")> */
+%<LibSFAssignDWork(block, 12, "0", "1")>
+%<LibSFAssignDWork(block, 12, "1", "8")>
+memset((void *)%<LibSFDWorkAddr(block, 11, "0")>, 0, sizeof(real_T) << 3);
+/* %<SLibStateflowComment(block,"","","1:50")> */
+%<LibSFAssignDWork(block, 14, "0", "7")>
+%<LibSFAssignDWork(block, 14, "1", "3")>
+memset((void *)%<LibSFDWorkAddr(block, 13, "0")>, 0, 21U * sizeof(real_T));
+/* %<SLibStateflowComment(block,"","","1:51")> */
+%<LibSFAssignDWork(block, 16, "0", "1")>
+%<LibSFAssignDWork(block, 16, "1", "8")>
+memset((void *)%<LibSFDWorkAddr(block, 15, "0")>, 0, sizeof(real_T) << 3);
+/* %<SLibStateflowComment(block,"","","1:52")> */
+%<LibSFAssignDWork(block, 18, "0", "7")>
+%<LibSFAssignDWork(block, 18, "1", "7")>
+/* %<SLibStateflowComment(block,"","","1:53")> */
+%<LibSFAssignDWork(block, 20, "0", "7")>
+%<LibSFAssignDWork(block, 20, "1", "7")>
+for(eml_j = 0; eml_j < 49; eml_j++) {
+%<LibSFAssignDWork(block, 17, "eml_j", "0.0")>
+%<LibSFAssignDWork(block, 19, "eml_j", "0.0")>
+}
+/* %<SLibStateflowComment(block,"","","1:54")> */
+%<LibSFAssignDWork(block, 22, "0", "1")>
+%<LibSFAssignDWork(block, 22, "1", "8")>
+memset((void *)%<LibSFDWorkAddr(block, 21, "0")>, 0, sizeof(real_T) << 3);
+/* %<SLibStateflowComment(block,"","","1:55")> */
+%<LibSFAssignDWork(block, 5, "", "0.0")>
+/* %<SLibStateflowComment(block,"","","1:56")> */
+%<LibSFAssignDWork(block, 6, "", "0.0")>
+/* %<SLibStateflowComment(block,"","","1:57")> */
+%<LibSFAssignDWork(block, 7, "", "0.0")>
+/* %<SLibStateflowComment(block,"","","1:58")> */
+%<LibSFAssignDWork(block, 8, "", "0.0")>
+/* %<SLibStateflowComment(block,"","","1:59")> */
+eml_nv = 0;
+eml_loop_ub = %<LibSFInput(block, 0, "6")>;
+for(eml_j_0 = 1.0; eml_j_0 <= eml_loop_ub; eml_j_0++) {
+/* %<SLibStateflowComment(block,"","","1:60")> */
+for(eml_j = 0; eml_j < 3; eml_j++) {
+/* %<SLibStateflowComment(block,"","","1:61")> */
+/* %<SLibStateflowComment(block,"","","1:62")> */
+eml_nv++;
+/* %<SLibStateflowComment(block,"","","1:63")> */
+%<LibSFAssignDWork(block, 9, "((int32_T)eml_j_0 - 1) + %<LibSFDWork(block, 10, "0")> * eml_j", "%<LibSFDWork(block, 3, "(eml_nv - 1)")>")>
+}
+}
+eml_loop_ub = %<LibSFInput(block, 0, "6")> + 1.0;
+for(eml_j = 1; (real_T)eml_j <= eml_loop_ub; eml_j++) {
+/* %<SLibStateflowComment(block,"","","1:67")> */
+/* %<SLibStateflowComment(block,"","","1:68")> */
+eml_nv++;
+/* %<SLibStateflowComment(block,"","","1:69")> */
+%<LibSFAssignDWork(block, 11, "(%<LibSFDWork(block, 12, "0")> * (eml_j - 1))", "%<LibSFDWork(block, 3, "(eml_nv - 1)")>")>
+}
+}
+eml_loop_ub = %<LibSFInput(block, 0, "6")>;
+for(eml_j_1 = 1; (real_T)eml_j_1 <= eml_loop_ub; eml_j_1++) {
+/* %<SLibStateflowComment(block,"","","1:74")> */
+/* %<SLibStateflowComment(block,"","","1:75")> */
+eml_j = eml_j_1 - 1;
+for(eml_nv = 0; eml_nv < 3; eml_nv++) {
+eml_a[eml_nv] = %<LibSFDWork(block, 9, "eml_j + %<LibSFDWork(block, 10, "0")> * eml_nv")>;
+}
+eml_b[0] = %<LibSFInput(block, 0, "0")>;
+eml_b[1] = %<LibSFInput(block, 0, "1")>;
+eml_b[2] = %<LibSFInput(block, 0, "2")>;
+eml_j_0 = 0.0;
+eml_j = 1;
+eml_nv = 1;
+for(eml_k = 0; eml_k < 3; eml_k++) {
+eml_j_0 += eml_a[eml_j - 1] * eml_b[eml_nv - 1];
+eml_j++;
+eml_nv++;
+}
+%<LibSFAssignDWork(block, 17, "(eml_j_1 - 1)", "eml_j_0")>
+/* u(1)=K1*e ,u(2)=K2*de/dt */
+/* u(3)=1 is bias unity */
+/* %<SLibStateflowComment(block,"","","1:77")> */
+%<LibSFAssignDWork(block, 21, "(eml_j_1 - 1)", "(tanh(0.5 * %<LibSFDWork(block, 17, "(eml_j_1 - 1)")>))")>
+/* outputs of hidden layer */
+}
+/* %<SLibStateflowComment(block,"","","1:80")> */
+%<LibSFAssignDWork(block, 21, "((int32_T)(%<LibSFInput(block, 0, "6")> + 1.0) - 1)", "%<LibSFInput(block, 0, "5")>")>
+/* %<SLibStateflowComment(block,"","","1:81")> */
+for(eml_j = 0; eml_j < 8; eml_j++) {
+eml_tmp_data[eml_j] = (int8_T)(1 + eml_j);
+}
+for(eml_j = 0; eml_j < 8; eml_j++) {
+eml_a_data[eml_j] = %<LibSFDWork(block, 11, "(%<LibSFDWork(block, 12, "0")> * (eml_tmp_data[eml_j] - 1))")>;
+}
+eml_j = %<LibSFDWork(block, 22, "1")> - 1;
+for(eml_nv = 0; eml_nv <= eml_j; eml_nv++) {
+eml_b_data[eml_nv] = %<LibSFDWork(block, 21, "eml_nv")>;
+}
+%<LibSFAssignDWork(block, 6, "", "0.0")>
+eml_j = 1;
+eml_nv = 1;
+for(eml_k = 0; eml_k < 8; eml_k++) {
+%<LibSFAssignDWork(block, 6, "", "%<LibSFDWork(block, 6, "")> + eml_a_data[eml_j - 1] * eml_b_data[eml_nv - 1]")>
+eml_j++;
+eml_nv++;
+}
+/* %<SLibStateflowComment(block,"","","1:82")> */
+%<LibSFAssignDWork(block, 8, "", "(0.5 * %<LibSFDWork(block, 6, "")>)")>
+%<LibSFAssignDWork(block, 8, "", "(tanh(%<LibSFDWork(block, 8, "")>))")>
+/* output of output layer */
+for(eml_j = 0; eml_j < 7; eml_j++) {
+/* %<SLibStateflowComment(block,"","","1:87")> */
+/* %<SLibStateflowComment(block,"","","1:88")> */
+%<LibSFAssignDWork(block, 5, "", "((%<LibSFInput(block, 0, "3")> + %<LibSFInput(block, 0, "4")>) * 0.5 * (1.0 - %<LibSFDWork(block, 8, "")> * %<LibSFDWork(block, 8, "")>))")>
+/* %<"\%\%delta adaptation law, dk means delta K,u(4)=K3*e ,u(5)=K4*de/dt"> */
+/* %<SLibStateflowComment(block,"","","1:90")> */
+%<LibSFAssignDWork(block, 15, "(%<LibSFDWork(block, 16, "0")> * eml_j)", "(%<LibSFInput(block, 0, "8")> * %<LibSFDWork(block, 5, "")> * %<LibSFDWork(block, 21, "eml_j")>)")>
+/* dw2 is weight update quantity for W2 */
+}
+/* %<"\%\%\%\%\%\%\%\%\%\%\%\%\%"> */
+for(eml_j = 0; eml_j < 7; eml_j++) {
+/* %<SLibStateflowComment(block,"","","1:95")> */
+/* %<SLibStateflowComment(block,"","","1:96")> */
+/* %<SLibStateflowComment(block,"","","1:97")> */
+%<LibSFAssignDWork(block, 7, "", "(%<LibSFDWork(block, 5, "")> * %<LibSFDWork(block, 11, "(%<LibSFDWork(block, 12, "0")> * eml_j)")>)")>
+/* %<SLibStateflowComment(block,"","","1:98")> */
+%<LibSFAssignDWork(block, 7, "", "(%<LibSFDWork(block, 7, "")> * 0.5 * (1.0 - %<LibSFDWork(block, 21, "eml_j")> * %<LibSFDWork(block, 21, "eml_j")>))")>
+/* %<SLibStateflowComment(block,"","","1:99")> */
+%<LibSFAssignDWork(block, 19, "eml_j", "%<LibSFDWork(block, 7, "")>")>
+/* back propogation, dj means delta J */
+}
+for(eml_j = 0; eml_j < 7; eml_j++) {
+/* %<SLibStateflowComment(block,"","","1:101")> */
+for(eml_nv = 0; eml_nv < 3; eml_nv++) {
+/* %<SLibStateflowComment(block,"","","1:102")> */
+/* %<SLibStateflowComment(block,"","","1:103")> */
+%<LibSFAssignDWork(block, 13, "eml_j + %<LibSFDWork(block, 14, "0")> * eml_nv", "(%<LibSFInput(block, 0, "8")> * %<LibSFDWork(block, 19, "eml_j")> * %<LibSFInput(block, 0, "eml_nv")>)")>
+/* dw1 is weight update quantity for W1 */
+}
+}
+for(eml_j = 0; eml_j < 7; eml_j++) {
+/* %<SLibStateflowComment(block,"","","1:106")> */
+/* %<SLibStateflowComment(block,"","","1:107")> */
+%<LibSFAssignDWork(block, 11, "(%<LibSFDWork(block, 12, "0")> * eml_j)", "%<LibSFDWork(block, 11, "(%<LibSFDWork(block, 12, "0")> * eml_j)")> + %<LibSFDWork(block, 15, "(%<LibSFDWork(block, 16, "0")> * eml_j)")>")>
+/* weight update */
+for(eml_nv = 0; eml_nv < 3; eml_nv++) {
+/* %<SLibStateflowComment(block,"","","1:108")> */
+/* %<SLibStateflowComment(block,"","","1:109")> */
+%<LibSFAssignDWork(block, 9, "eml_j + %<LibSFDWork(block, 10, "0")> * eml_nv", "%<LibSFDWork(block, 9, "eml_j + %<LibSFDWork(block, 10, "0")> * eml_nv")> + %<LibSFDWork(block, 13, "eml_j + %<LibSFDWork(block, 14, "0")> * eml_nv")>")>
+/* weight update */
+}
+}
+/*   */
+/*  %<"\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%\%"> */
+/*   */
+/*  nv=0; */
+/*  for j=1:u(7) */
+/*  for i=1:3 */
+/*  nv=nv+1; */
+/*  x(nv)=w1(j,i); %<"\%assign w1(1)-w1(15) to x(1)-x(15)"> */
+/*  end */
+/*  k=1; */
+/*  for j=1:u(7) */
+/*  nv=nv+1; */
+/*  x(nv)=w2(k,j); %<"\%assign w2(1)-w2(5) to x(16)-x(20)"> */
+/*  end */
+/*  x(u(8)+1)=opk(1); %<"\%assign output of neural network to x(21)"> */
+/*  sys=x; %<"\%Assign state variable x to sys"> */
+/* %<SLibStateflowComment(block,"","","1:131")> */
+%<LibSFAssignOutput(block, 1, "", "%<LibSFDWork(block, 8, "")>")>
+/* %<SLibStateflowComment(block,"","","1:132")> */
+%<LibSFAssignOutput(block, 2, "", "%<LibSFDWork(block, 9, "0")>")>
+}
+   %closefile codeBuf
+   %return codeBuf
+%endfunction  %% Outputs
+%function InlinedInitializerCode(block,system) Output
+   %<SLibResetSFChartInstanceAccessed(block)>\
+   %openfile initBodyBuf
+      %<LibSFAssignDWork(block, 10, "0", "0")>
+%<LibSFAssignDWork(block, 10, "1", "0")>
+%<LibSFAssignDWork(block, 12, "0", "0")>
+%<LibSFAssignDWork(block, 12, "1", "0")>
+%<LibSFAssignDWork(block, 14, "0", "0")>
+%<LibSFAssignDWork(block, 14, "1", "0")>
+%<LibSFAssignDWork(block, 16, "0", "0")>
+%<LibSFAssignDWork(block, 16, "1", "0")>
+%<LibSFAssignDWork(block, 18, "0", "0")>
+%<LibSFAssignDWork(block, 18, "1", "0")>
+%<LibSFAssignDWork(block, 20, "0", "0")>
+%<LibSFAssignDWork(block, 20, "1", "0")>
+%<LibSFAssignDWork(block, 22, "0", "0")>
+%<LibSFAssignDWork(block, 22, "1", "0")>
+%<LibSFAssignDWork(block, 4, "", "FALSE")>
+
+   %closefile initBodyBuf
+   %if !WHITE_SPACE(initBodyBuf)
+      /* Initialize code for chart: '%<LibGetBlockName(block)>' */
+      %<initBodyBuf>\
+   %endif
+%endfunction
+
+
+%function EnableUnboundOutputEventsCode(block,system) Output
+   %openfile initBodyBuf
+      
+   %closefile initBodyBuf
+   %if !WHITE_SPACE(initBodyBuf)
+      /* Enable code for chart: '%<LibGetBlockName(block)>' */
+      %<initBodyBuf>\
+   %endif
+%endfunction
+
+%function DisableUnboundOutputEventsCode(block,system) Output
+   %openfile initBodyBuf
+      
+   %closefile initBodyBuf
+   %if !WHITE_SPACE(initBodyBuf)
+      /* Disable code for chart: '%<LibGetBlockName(block)>' */
+      %<initBodyBuf>\
+   %endif
+%endfunction
+
+%function DumpSharedUtils(block,system) void
+%endfunction
+
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   23 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "nhn"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "init_nn_output"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "number_of_weights"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "init_state"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [30]\
+    }\
+    ChartData {\
+      Name         "w1_not_empty"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "dk"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "kv"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "sm"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "opk"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "w1_data"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [21]\
+    }\
+    ChartData {\
+      Name         "w1_sizes"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [2]\
+    }\
+    ChartData {\
+      Name         "w2_data"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [8]\
+    }\
+    ChartData {\
+      Name         "w2_sizes"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [2]\
+    }\
+    ChartData {\
+      Name         "dw1_data"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [21]\
+    }\
+    ChartData {\
+      Name         "dw1_sizes"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [2]\
+    }\
+    ChartData {\
+      Name         "dw2_data"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [8]\
+    }\
+    ChartData {\
+      Name         "dw2_sizes"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [2]\
+    }\
+    ChartData {\
+      Name         "jv_data"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [49]\
+    }\
+    ChartData {\
+      Name         "jv_sizes"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [2]\
+    }\
+    ChartData {\
+      Name         "dj_data"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [49]\
+    }\
+    ChartData {\
+      Name         "dj_sizes"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [2]\
+    }\
+    ChartData {\
+      Name         "ipj_data"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [8]\
+    }\
+    ChartData {\
+      Name         "ipj_sizes"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [2]\
+    }\
+  }
+  %return ChartDataElements
+%endfunction

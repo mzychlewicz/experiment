@@ -1,0 +1,41 @@
+
+%implements "chartHeader" "C"
+%function CacheOutputs(block,system) void
+%openfile typedefsBuf
+            
+%closefile typedefsBuf
+   %if !WHITE_SPACE(typedefsBuf)
+      %openfile tempBuf
+#ifndef _CSC1_PII_SPEED_CHARTSTRUCT
+#define _CSC1_PII_SPEED_CHARTSTRUCT
+      %<typedefsBuf>\
+ #endif /* _CSC1_PII_SPEED_CHARTSTRUCT */
+      %closefile tempBuf
+%<SLibCacheCodeToFile("sf_chart_standalone_data_typedef",tempBuf)>
+   %endif
+
+%openfile typedefsBuf
+%closefile typedefsBuf
+   %if !WHITE_SPACE(typedefsBuf)
+      %openfile tempBuf
+#ifndef _CSC1_PII_SPEED_CHARTSTRUCT_custom
+#define _CSC1_PII_SPEED_CHARTSTRUCT_custom
+      %<typedefsBuf>\
+ #endif /* _CSC1_PII_SPEED_CHARTSTRUCT_custom */
+      %closefile tempBuf
+%<SLibCacheCodeToFile("sf_chart_data_basedOnUserType_typedef",tempBuf)>
+   %endif
+
+%openfile externFcnsBuf
+   
+   
+   
+   
+   
+%closefile externFcnsBuf
+%<SLibCacheCodeToFile("sf_chart_fcn_decl",externFcnsBuf)>
+   %openfile externFcnsBuf
+   %closefile externFcnsBuf
+   %<SLibCacheCodeToFile("sf_chart_fcn_decl",externFcnsBuf)>
+
+%endfunction %% CacheOutputs

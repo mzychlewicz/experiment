@@ -1,0 +1,429 @@
+-- ******** Tunable Parameters ************************************************
+
+group "Tunable Parameters"
+{
+ flags: COLLAPSED
+}
+
+	p_PII_speed_P_real_T_0[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "Amp"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "f"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[2]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "g"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[3]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "kii"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[4]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "kpi"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[5]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "nap"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[6]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "obc_del"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[7]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "obc_del2"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[8]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "obc_en"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[9]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "obc_en1"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[10]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "offset"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_real_T_0[11]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "start"
+	 flags:   PARAM
+	}
+	p_PII_speed_P_boolean_T_1[0]
+	{
+	 type:    uint(8)*
+	 alias:   "en"
+	 bitmask: 0x01
+	 range:   < 0 ; 1 >
+	 flags:   PARAM
+	}
+
+endgroup
+
+
+-- ******** State Machine Data ************************************************
+
+-- No Stateflow chart within the model.
+
+
+-- ******** Data Store Memories ***********************************************
+
+-- No Data Store Memories within the model.
+
+
+-- ******** Labels ************************************************************
+
+group "Labels"
+{
+ flags: COLLAPSED
+}
+	p_PII_speed_B_real_T_1[15]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(c-x)/(c-b){Occurence1}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBde/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[12]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(c-x)/(c-b){Occurence2}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBe/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[23]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(c-x)/(c-b){Occurence3}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBde/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[37]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(c-x)/(c-b){Occurence4}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBe/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[19]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(c-x)/(c-b){Occurence5}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEde/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[27]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(c-x)/(c-b){Occurence6}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEe/If Action\nSubsystem2/Product cd\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[15]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence1}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBde/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[12]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence2}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBe/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[23]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence3}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBde/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[37]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence4}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBe/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[19]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence5}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEde/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[27]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "(x-a)/(b-a){Occurence6}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEe/If Action\nSubsystem3/Product ab\n(trimf)/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_15[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence1}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBde/If Action\nSubsystem3/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_13[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence2}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBe/If Action\nSubsystem3/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_11[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence3}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBde/If Action\nSubsystem3/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_9[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence4}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBe/If Action\nSubsystem3/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_7[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence5}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEde/If Action\nSubsystem3/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_5[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "b-a{Occurence6}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEe/If Action\nSubsystem3/Sum1/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_14[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-b{Occurence1}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBde/If Action\nSubsystem2/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_12[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-b{Occurence2}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBe/If Action\nSubsystem2/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_10[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-b{Occurence3}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBde/If Action\nSubsystem2/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_8[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-b{Occurence4}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBe/If Action\nSubsystem2/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_6[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-b{Occurence5}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEde/If Action\nSubsystem2/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_4[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-b{Occurence6}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEe/If Action\nSubsystem2/Sum2/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_14[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-x{Occurence1}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBde/If Action\nSubsystem2/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_12[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-x{Occurence2}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBe/If Action\nSubsystem2/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_10[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-x{Occurence3}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBde/If Action\nSubsystem2/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_8[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-x{Occurence4}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBe/If Action\nSubsystem2/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_6[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-x{Occurence5}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEde/If Action\nSubsystem2/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_4[1]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "c-x{Occurence6}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEe/If Action\nSubsystem2/Sum3/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[9]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "nn"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/Subsystem8/Out2"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[22]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "np"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/Subsystem2/Out2"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[18]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "nz"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/Subsystem1/Out2"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[36]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "pn"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/Subsystem6/Out2"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[43]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "pp"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/Subsystem9/Out2"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[40]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "pz"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/Subsystem7/Out2"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_15[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence1}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBde/If Action\nSubsystem3/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_13[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence2}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/NBe/If Action\nSubsystem3/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_11[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence3}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBde/If Action\nSubsystem3/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_9[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence4}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/PBe/If Action\nSubsystem3/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_7[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence5}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEde/If Action\nSubsystem3/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_5[0]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "x-a{Occurence6}"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/ZEe/If Action\nSubsystem3/Sum/Out1"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[26]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "zn"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/Subsystem3/Out2"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[33]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "zp"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/Subsystem5/Out2"
+	 flags:   LABEL|READONLY
+	}
+	p_PII_speed_B_real_T_1[30]
+	{
+	 type:    flt(64,IEEE)*
+	 alias:   "zz"
+	 origin:  "PII_speed/Subsystem1/Regulator adaptacyjny/Subsystem4/Out2"
+	 flags:   LABEL|READONLY
+	}
+
+endgroup
+
+-- ******** RTT Dynamic Variables *********************************************
+
+-- Generation of RTT Dynamic Variables turned off with EnableRealTimeTesting option.
+

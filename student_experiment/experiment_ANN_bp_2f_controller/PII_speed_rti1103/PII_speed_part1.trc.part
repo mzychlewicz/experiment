@@ -1,0 +1,2176 @@
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+{
+ flags: COLLAPSED
+}
+	group "Abs" -- block-group
+	{
+	 block: "Abs"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_0[29]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Abs"
+
+	group "EN" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "EN"
+
+	group "RES4013" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "RES4013"
+
+	group "RESET" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "RESET"
+
+	group "nap" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "nap"
+
+	group "offset" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "offset"
+
+	group "Gain" -- block-group
+	{
+	 block: "Gain"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_0[11]
+		{
+		 type:    PII_speed_ArrayDT0_2*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Gain"
+
+	group "g" -- block-group
+	{
+	 block: "Gain"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_0[26]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "g"
+
+	group "norm_I" -- block-group
+	{
+	 block: "Gain"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_0[16]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "norm_I"
+
+	group "omega1" -- block-group
+	{
+	 block: "Gain"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_2[9]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "omega1"
+
+	group "omega2" -- block-group
+	{
+	 block: "Gain"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_2[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "omega2"
+
+	group "prad" -- block-group
+	{
+	 block: "Gain"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_0[19]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "prad"
+
+	group "prad_pom" -- block-group
+	{
+	 block: "Gain"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_0[18]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "prad_pom"
+
+	group "predkosc1" -- block-group
+	{
+	 block: "Gain"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_2[8]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "predkosc1"
+
+	group "predkosc2" -- block-group
+	{
+	 block: "Gain"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_2[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "predkosc2"
+
+	group "Ground2" -- block-group
+	{
+	 block: "Ground"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "Ground2"
+
+	group "Ground3" -- block-group
+	{
+	 block: "Ground"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "Ground3"
+
+	group "Ground4" -- block-group
+	{
+	 block: "Ground"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "Ground4"
+
+	group "Ground5" -- block-group
+	{
+	 block: "Ground"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "Ground5"
+
+	group "Ground6" -- block-group
+	{
+	 block: "Ground"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "Ground6"
+
+	group "Ground7" -- block-group
+	{
+	 block: "Ground"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "Ground7"
+
+	group "Ground8" -- block-group
+	{
+	 block: "Ground"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "Ground8"
+
+	group "Logical\nOperator" -- block-group
+	{
+	 block: "Logic"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_boolean_T_3[0]
+		{
+		 type:    uint(8)*
+		 alias:   "Out1"
+		 desc:    ""
+		 range:   < 0 ; 1 >
+		 bitmask: 0x01
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Logical\nOperator"
+
+	group "Saturation" -- block-group
+	{
+	 block: "Saturate"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_0[14]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Saturation"
+
+	group "SG" -- block-group
+	{
+	 block: "SignalGenerator"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_0[6]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "SG"
+
+	group "PWM" -- block-group
+	{
+	 block: "Sum"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_0[27]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "PWM"
+
+	group "prad22" -- block-group
+	{
+	 block: "Sum"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_0[17]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "prad22"
+
+	group "ZOH1" -- block-group
+	{
+	 block: "ZeroOrderHold"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_2[10]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "ZOH1"
+
+	group "ZOH3" -- block-group
+	{
+	 block: "ZeroOrderHold"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_2[22]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "ZOH3"
+
+	group "ZOH4" -- block-group
+	{
+	 block: "ZeroOrderHold"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_2[15]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "ZOH4"
+
+	group "ZOH5" -- block-group
+	{
+	 block: "ZeroOrderHold"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_2[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "ZOH5"
+
+	group "ZOH6" -- block-group
+	{
+	 block: "ZeroOrderHold"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_PII_speed_B_real_T_2[5]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "ZOH6"
+
+  
+  
+	group "DS1103ADC_C19" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_PII_speed_B_real_T_0[15]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "ADC"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+	endgroup -- subsystem-group "DS1103ADC_C19"
+  
+  
+	group "DS1103BIT_OUT_G0" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "DS1103BIT_OUT_G0"
+  
+  
+	group "DS1103ENC_POS_C1" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		-- Skipping output Enc position
+		p_PII_speed_B_real_T_1[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Enc delta position"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+	endgroup -- subsystem-group "DS1103ENC_POS_C1"
+  
+  
+	group "DS1103ENC_POS_C2" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		-- Skipping output Enc position
+		p_PII_speed_B_real_T_2[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Enc delta position"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+	endgroup -- subsystem-group "DS1103ENC_POS_C2"
+  
+  
+	group "DS1103ENC_SETUP" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "DS1103ENC_SETUP"
+  
+  
+	group "DS1103SL_DSP_PWM" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "DS1103SL_DSP_PWM"
+  
+  
+	group "Obc_EN" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_PII_speed_B_real_T_0[9]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1{SubArray1}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_PII_speed_B_real_T_0[10]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1{SubArray2}"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+		group "In2" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "In2"
+
+		group "In1" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[28]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "In1"
+
+		group "Abs" -- block-group
+		{
+		 block: "Abs"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Abs"
+
+		group "Bus\nCreator" -- block-group
+		{
+		 block: "BusCreator"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[9]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1{SubArray1}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_PII_speed_B_real_T_0[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1{SubArray2}"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Bus\nCreator"
+
+		group "Gain" -- block-group
+		{
+		 block: "Gain"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Gain"
+
+		group "Obc_poziom" -- block-group
+		{
+		 block: "Lookup"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[8]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_PII_speed_B_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "In1"
+			 desc:    ""
+			 flags:   SINK|READONLY
+			}
+
+
+
+		endgroup -- block-group "Obc_poziom"
+
+		group "Product" -- block-group
+		{
+		 block: "Product"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[9]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Product"
+
+		group "Sign" -- block-group
+		{
+		 block: "Signum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sign"
+
+		group "Sign1" -- block-group
+		{
+		 block: "Signum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sign1"
+
+		group "Obc_en" -- block-group
+		{
+		 block: "Step"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[0]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Obc_en"
+
+		group "Obc_en1" -- block-group
+		{
+		 block: "Step"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Obc_en1"
+
+		group "Add" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Add"
+
+		group "TD" -- block-group
+		{
+		 block: "TransportDelay"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[1]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "TD"
+
+		group "TD1" -- block-group
+		{
+		 block: "TransportDelay"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "TD1"
+
+
+
+	endgroup -- subsystem-group "Obc_EN"
+  
+  
+	group "RTI Data" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+
+	endgroup -- subsystem-group "RTI Data"
+  
+  
+	group "Subsystem1" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_PII_speed_B_real_T_0[13]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "mez"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+		group "wz" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[2]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "wz"
+
+		group "w1" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "w1"
+
+		group "w2" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[5]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "w2"
+
+		group "ms" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[15]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "ms"
+
+		group "me" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[22]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "me"
+
+		group "Derivative" -- block-group
+		{
+		 block: "Derivative"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[19]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Derivative"
+
+		group "Gain1" -- block-group
+		{
+		 block: "Gain"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Gain1"
+
+		group "Gain2" -- block-group
+		{
+		 block: "Gain"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[11]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Gain2"
+
+		group "Gain3" -- block-group
+		{
+		 block: "Gain"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[17]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Gain3"
+
+		group "Gain4" -- block-group
+		{
+		 block: "Gain"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[16]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Gain4"
+
+		group "Integrator1" -- block-group
+		{
+		 block: "Integrator"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[13]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Integrator1"
+
+		group "Add2" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[20]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Add2"
+
+		group "Add6" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Add6"
+
+		group "Add8" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[18]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Add8"
+
+  
+  
+		group "Obserwator Luenbergera1" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_PII_speed_B_real_T_2[23]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "w1e"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_PII_speed_B_real_T_2[30]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "w2e"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_PII_speed_B_real_T_2[21]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Mse"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+			p_PII_speed_B_real_T_2[28]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Moe"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+			group "Me" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[22]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Me"
+
+			group "w1" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[10]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "w1"
+
+			group "Constant" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Constant"
+
+			group "Constant1" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Constant1"
+
+			group "Constant2" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Constant2"
+
+			group "Constant3" -- block-group
+			{
+			 block: "Constant"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				-- Skipping output Out1
+
+
+			endgroup -- block-group "Constant3"
+
+			group "1//T1" -- block-group
+			{
+			 block: "Gain"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[34]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "1//T1"
+
+			group "1//T2" -- block-group
+			{
+			 block: "Gain"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[35]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "1//T2"
+
+			group "1//Tc" -- block-group
+			{
+			 block: "Gain"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[36]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "1//Tc"
+
+			group "Integrator1" -- block-group
+			{
+			 block: "Integrator"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[23]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Integrator1"
+
+			group "Integrator2" -- block-group
+			{
+			 block: "Integrator"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[21]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Integrator2"
+
+			group "Integrator3" -- block-group
+			{
+			 block: "Integrator"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[30]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Integrator3"
+
+			group "Integrator4" -- block-group
+			{
+			 block: "Integrator"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[28]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Integrator4"
+
+			group "Product" -- block-group
+			{
+			 block: "Product"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[25]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Product"
+
+			group "Product1" -- block-group
+			{
+			 block: "Product"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[31]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Product1"
+
+			group "Product2" -- block-group
+			{
+			 block: "Product"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[27]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Product2"
+
+			group "Product3" -- block-group
+			{
+			 block: "Product"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[37]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Product3"
+
+			group "\n\n" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[26]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "\n\n"
+
+			group "\n\n1" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[29]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "\n\n1"
+
+			group "\n\n2" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[32]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "\n\n2"
+
+			group "\n\n3" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[33]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "\n\n3"
+
+			group "Add9" -- block-group
+			{
+			 block: "Sum"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_real_T_2[24]
+				{
+				 type:    flt(64,IEEE)*
+				 alias:   "Out1"
+				 desc:    ""
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Add9"
+
+			group "To Workspace" -- block-group
+			{
+			 block: "ToWorkspace"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+
+				-- Skipping inport In1
+
+
+
+
+			endgroup -- block-group "To Workspace"
+
+			group "To Workspace1" -- block-group
+			{
+			 block: "ToWorkspace"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+
+				-- Skipping inport In1
+
+
+
+
+			endgroup -- block-group "To Workspace1"
+
+			group "To Workspace2" -- block-group
+			{
+			 block: "ToWorkspace"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+
+				-- Skipping inport In1
+
+
+
+
+			endgroup -- block-group "To Workspace2"
+
+			group "To Workspace3" -- block-group
+			{
+			 block: "ToWorkspace"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+
+				-- Skipping inport In1
+
+
+
+
+			endgroup -- block-group "To Workspace3"
+
+
+
+		endgroup -- subsystem-group "Obserwator Luenbergera1"
+
+
+	endgroup -- subsystem-group "Subsystem1"
+  
+  
+	group "estym_ms" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_PII_speed_B_real_T_2[14]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "m_s"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+		group "me" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[22]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "me"
+
+		group "w_1" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "w_1"
+
+		group "ms_est" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[14]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "ms_est"
+
+		group "Transfer Fcn1" -- block-group
+		{
+		 block: "TransferFcn"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[12]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Transfer Fcn1"
+
+		group "Transfer Fcn2" -- block-group
+		{
+		 block: "TransferFcn"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[13]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Transfer Fcn2"
+
+
+
+	endgroup -- subsystem-group "estym_ms"
+  
+  
+	group "regulator pradu" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_PII_speed_B_real_T_0[25]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "us"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+		group "it_zad" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[14]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "it_zad"
+
+		group "it" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[19]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "it"
+
+		group "RES" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_boolean_T_3[0]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "RES"
+
+		group "offset" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "offset"
+
+		group "KI" -- block-group
+		{
+		 block: "Gain"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_2[38]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "KI"
+
+		group "Kp" -- block-group
+		{
+		 block: "Gain"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[21]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Kp"
+
+		group "Continous-time\nintegrator" -- block-group
+		{
+		 block: "Integrator"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[22]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Continous-time\nintegrator"
+
+		group "Saturation" -- block-group
+		{
+		 block: "Saturate"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[24]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Saturation"
+
+		group "Sum1" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[20]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sum1"
+
+		group "Sum2" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[23]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sum2"
+
+		group "prad" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[25]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "prad"
+
+
+
+	endgroup -- subsystem-group "regulator pradu"
+  
+  
+	group "wyz" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_PII_speed_B_real_T_0[28]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "O"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+		group "I" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[6]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "I"
+
+		group "S" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "S"
+
+		group "Start" -- block-group
+		{
+		 block: "Constant"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "Start"
+
+		group "HC" -- block-group
+		{
+		 block: "HitCross"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_boolean_T_3[1]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "HC"
+
+		group "LO" -- block-group
+		{
+		 block: "Logic"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_boolean_T_3[2]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "LO"
+
+		group "LO3" -- block-group
+		{
+		 block: "Logic"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_boolean_T_3[3]
+			{
+			 type:    uint(8)*
+			 alias:   "Out1"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "LO3"
+
+		group "Switch" -- block-group
+		{
+		 block: "Switch"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_PII_speed_B_real_T_0[28]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Switch"
+
+  
+  
+		group "S-R\nFlip-Flop" -- subsystem-group
+		{
+		 flags: COLLAPSED
+		 desc:  ""
+		}
+
+			p_PII_speed_B_boolean_T_3[5]
+			{
+			 type:    uint(8)*
+			 alias:   "Q"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+			p_PII_speed_B_boolean_T_3[6]
+			{
+			 type:    uint(8)*
+			 alias:   "!Q"
+			 desc:    ""
+			 range:   < 0 ; 1 >
+			 bitmask: 0x01
+			 flags:   OUTPUT|READONLY
+			}
+
+
+			group "S" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_boolean_T_3[2]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 desc:    ""
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "S"
+
+			group "R" -- block-group
+			{
+			 block: "Inport"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_boolean_T_3[3]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 desc:    ""
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "R"
+
+			group "Logic" -- block-group
+			{
+			 block: "CombinatorialLogic"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_boolean_T_3[5]
+				{
+				 type:    PII_speed_ArrayDT8_2*
+				 alias:   "Out1"
+				 desc:    ""
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Logic"
+
+			group "Demux" -- block-group
+			{
+			 block: "Demux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_boolean_T_3[5]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 desc:    ""
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+				p_PII_speed_B_boolean_T_3[6]
+				{
+				 type:    uint(8)*
+				 alias:   "Out2"
+				 desc:    ""
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Demux"
+
+			group "Memory" -- block-group
+			{
+			 block: "Memory"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_boolean_T_3[4]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1"
+				 desc:    ""
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Memory"
+
+			group "Mux" -- block-group
+			{
+			 block: "Mux"
+			 desc:  ""
+			 flags: BLOCK|COLLAPSED
+			}
+				p_PII_speed_B_boolean_T_3[2]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1{SubArray1}"
+				 desc:    ""
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+				p_PII_speed_B_boolean_T_3[3]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1{SubArray2}"
+				 desc:    ""
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+				p_PII_speed_B_boolean_T_3[4]
+				{
+				 type:    uint(8)*
+				 alias:   "Out1{SubArray3}"
+				 desc:    ""
+				 range:   < 0 ; 1 >
+				 bitmask: 0x01
+				 flags:   OUTPUT|READONLY
+				}
+
+
+			endgroup -- block-group "Mux"
+
+
+
+		endgroup -- subsystem-group "S-R\nFlip-Flop"
+
+
+	endgroup -- subsystem-group "wyz"
+
+
+
+
+endgroup -- "Model Root"
